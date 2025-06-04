@@ -1,14 +1,7 @@
-// funder.js の先頭あたりに追加
 
-function checkInitialTicketCount() {
-  console.log("✅ チケットチェック関数定義済み");
-}
+(function () {
+  'use strict';
 
-// グローバルスコープで使うなら、明示的に window にバインド
-window.checkInitialTicketCount = checkInitialTicketCount;
-
-// funder.mjs
-export function startFunderAutomation() {
   const isMobile = /iPhone|Android.+Mobile|Windows Phone/.test(navigator.userAgent);
   console.log("📱 モード:", isMobile ? "スマホ" : "PC");
 
@@ -26,22 +19,20 @@ export function startFunderAutomation() {
 
   function createControlPanel() {
     const panel = document.createElement("div");
-    panel.style = `
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      background-color: #fff;
-      border: 1px solid #ccc;
-      padding: 10px;
-      z-index: 9999;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      font-size: 14px;
-      font-family: sans-serif;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    `;
+    panel.style.position = "fixed";
+    panel.style.top = "10px";
+    panel.style.right = "10px";
+    panel.style.backgroundColor = "#fff";
+    panel.style.border = "1px solid #ccc";
+    panel.style.padding = "10px";
+    panel.style.zIndex = "9999";
+    panel.style.borderRadius = "8px";
+    panel.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
+    panel.style.fontSize = "14px";
+    panel.style.fontFamily = "sans-serif";
+    panel.style.display = "flex";
+    panel.style.flexDirection = "column";
+    panel.style.gap = "8px";
 
     const perfSelect = document.createElement("select");
     ["第1回公演", "第2回公演", "第3回公演", "第4回公演", "第5回公演"].forEach(text => {
@@ -77,14 +68,12 @@ export function startFunderAutomation() {
 
     const startButton = document.createElement("button");
     startButton.textContent = "開始";
-    startButton.style = `
-      padding: 6px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    `;
+    startButton.style.padding = "6px";
+    startButton.style.backgroundColor = "#007bff";
+    startButton.style.color = "#fff";
+    startButton.style.border = "none";
+    startButton.style.borderRadius = "4px";
+    startButton.style.cursor = "pointer";
     startButton.onclick = () => {
       if (!automationStarted) {
         automationStarted = true;
@@ -246,4 +235,4 @@ export function startFunderAutomation() {
   }
 
   window.addEventListener("load", createControlPanel);
-}
+})();
