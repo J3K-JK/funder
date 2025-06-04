@@ -1,3 +1,12 @@
+// funder.js の先頭あたりに追加
+
+function checkInitialTicketCount() {
+  console.log("✅ チケットチェック関数定義済み");
+}
+
+// グローバルスコープで使うなら、明示的に window にバインド
+window.checkInitialTicketCount = checkInitialTicketCount;
+
 // funder.mjs
 export function startFunderAutomation() {
   const isMobile = /iPhone|Android.+Mobile|Windows Phone/.test(navigator.userAgent);
