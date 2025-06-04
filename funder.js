@@ -6,7 +6,9 @@
 // @author       You
 // @match        https://fanclub-funderful.tokyodisneyresort.jp/event/*
 // @grant        none
+// @require      https://raw.githubusercontent.com/J3K-JK/funder/main/funder.js
 // ==/UserScript==
+
 
 (function () {
   'use strict';
