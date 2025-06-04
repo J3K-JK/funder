@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      2.0
 // @description  PC・スマホ両対応のファンダフルショー自動予約スクリプト
-// @author       You
+// @author       J3K
 // @match        https://fanclub-funderful.tokyodisneyresort.jp/event/*
 // @grant        none
 // @require      https://raw.githubusercontent.com/J3K-JK/funder/main/funder.js
