@@ -1,5 +1,5 @@
-
-(function () {
+// funder.js（ESモジュール形式）
+export default function funderReservationMain() {
   'use strict';
 
   const isMobile = /iPhone|Android.+Mobile|Windows Phone/.test(navigator.userAgent);
@@ -235,4 +235,4 @@
   }
 
   window.addEventListener("load", createControlPanel);
-})();
+}
